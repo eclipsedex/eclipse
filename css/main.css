@@ -1,0 +1,543 @@
+/* App Global */
+::-webkit-scrollbar {
+    width: 0;
+    background: #cccccc;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #bec9e2;
+    border-radius: 10px;
+}
+.segment__button.disabled {
+    opacity: 0.5;
+}
+.ic {
+    color: rgb(169 173 178);
+}
+app {
+    max-width: 800px;
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.centerApp {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.appBar {
+    background: #272a33;
+    zoom: 120%;
+}
+.tabbar.ons-tabbar__footer.ons-swiper-tabbar {
+    background: #272a33;
+}
+.page__background, body {
+    background-color: #161a24;
+}
+*, .toolbar__title, walletbalance , .userAvatar, .profileCard, .userNameProfile{
+    color: rgb(150 150 170);
+}
+.alert-dialog {
+    z-index: 20001;
+    opacity: 0.95;
+    border: 1px solid #b9b4b4;
+    background: rgb(22 27 36);
+}
+ons-alert-dialog-button.alert-dialog-button--primal.alert-dialog-button--rowfooter.alert-dialog-button , .alert-dialog-content, .alert-dialog-title{
+    color: #d5d5d5;
+}
+.toast {
+    background: #31a031;
+}
+input.text-input.text-input--underbar {
+    color: white;
+}
+.alert-dialog {
+    z-index: 20001;
+    opacity: 0.95;
+    border: 1px solid #484848;
+    background: rgb(21 26 34);
+}
+ons-alert-dialog-button.alert-dialog-button--primal.alert-dialog-button--rowfooter.alert-dialog-button {
+    position: relative;
+    border-top-color: #4e4e4e;
+}
+/* loader */
+.loadCover {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SIgn Out */
+.alert-dialog-mask {
+    z-index: 20000;
+    backdrop-filter: blur(10px);
+}
+
+/* Profile */
+.userPhoto {
+    display: block;
+    text-align: center;
+}
+.userAvatar {
+    display: block;
+    font-size: 65px;
+    top: 65px;
+    position: relative;
+}
+.userNameProfile {
+    display: block;
+    font-size: 22px;
+    margin-top: 65px;
+    margin-bottom: 20px;
+}
+.profileCard {
+    display: block;
+    font-size: 20px;
+    width: 90%;
+    position: relative;
+    margin-top: 25px;
+    border-top: 1px solid rgb(56, 62, 70);
+    left: 5%;
+} 
+.profileHead {
+    display: block;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.profileValue {
+    display: block;
+    font-size: 16px;
+    margin-top: 7px;
+}
+
+/* Wallet */
+walletbalance {
+    display: block;
+    position: relative;
+    font-size: 45px;
+    top: 50px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgb(56, 62, 70);
+    width: 90%;
+    left: 5%;
+    margin-bottom: 25px;
+}
+totalBalance {
+    display: block;
+    position: relative;
+    font-size: 17px;
+    margin-top: 20px;
+}
+.profileButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+button.button--cta.profileButton {
+    display: block;
+    width: 40%;
+    background: rgb(0 118 255 / 0.8);
+}
+.inPositions {
+    display: block;
+    width: 90%;
+    left: 5%;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+/* Positions */
+position {
+    display: block;
+    position: absolute;
+    width: 84%;
+    left: 8%;
+    border: 1px solid #1a1e28;
+    margin-top: 0;
+    border-radius: 6px;
+    background: #272a33;
+    box-shadow: 2px 2px 3px 0.5px #333948;
+    padding: 10px 10px;
+    margin-left: -10px;
+    font-size: 15px;
+    top: 200px;
+}
+positionchart {
+    display: block;
+    position: relative;
+    width: 84%;
+    left: 8%;
+    border: 1px solid #1a1e28;
+    margin-top: 25px;
+    border-radius: 6px;
+    background: #272a33;
+    box-shadow: 2px 2px 3px 0.5px #333948;
+    padding: 10px 10px;
+    margin-left: -10px;
+    font-size: 15px;
+    height: 150px;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.posChart {
+    display: block;
+    width: 100%;
+    height: 270px;
+    top: -90px;
+    position: relative;
+    left: 0;
+    overflow: hidden;
+    filter: hue-rotate(45deg);
+    margin-bottom: -60px;
+}
+/* position {
+    display: block;
+    position: relative;
+    width: 86%;
+    left: 7%;
+    border: 1px solid #1a1e28;
+    margin-top: 25px;
+    border-radius: 6px;
+    background: transparent;
+    padding: 10px 10px;
+    margin-left: -10px;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(56, 62, 70);
+    padding-bottom: 15px;
+} */
+
+/* .blockadeOne {
+    display: block;
+    position: absolute;
+    background: #161a24;
+    width: 100%;
+    height: 45px;
+    top: 0;
+}
+.blockadetwo {
+    display: block;
+    position: absolute;
+    background: #161a24;
+    width: 100%;
+    height: 50px;
+    top: 175px;
+} */
+.positionName {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+.positionBadge {
+    display: inline-block;
+    padding: 5px 8px;
+    background: green;
+    border-radius: 5px;
+    color: rgb(255 255 255 / 76%);
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.positionField {
+    display: block;
+    margin-top: 5px;
+    letter-spacing: 0.1px;
+    margin-left: 8px;
+}
+.positionValue {
+    display: block;
+    letter-spacing: 0.1px;
+    margin-left: 8px;
+    float: right;
+    margin-top: -19px;
+    margin-right: 8px;
+}
+.closeposition {
+    display: block;
+    letter-spacing: 0.1px;
+    margin-left: 8px;
+    /* background: #ff3838; */
+    text-align: center;
+    color: white;
+    padding: 5px 0;
+    border-radius: 6px; 
+    font-size: 16px;
+    margin-top: 15px;
+    transform: scale(0.8);
+}
+.noPositions {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+/* market */
+contract {
+    display: block;
+    position: relative;
+    width: 84%;
+    left: 8%;
+    border: 1px solid #1a1e28;
+    margin-top: 25px;
+    border-radius: 6px;
+    background: #272a33;
+    box-shadow: 2px 2px 3px 0.5px #333948;
+    padding: 10px 10px;
+    margin-left: -10px;
+    overflow: hidden;
+}
+.contractName {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+img.contractImage {
+    display: block;
+    position: absolute;
+    /* background: #8997a7; */
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+    outline: none;
+    top: 12px;
+}
+.contractName {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 7px;
+    left: 40px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Contract Window */
+.contractWindowName {
+    display: block;
+    position: absolute;
+    padding-top: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+    background: #161a24;
+    height: 35px;
+    width: 100%;
+}
+i.fa.fa-angle-left.backArrow {
+    display: block;
+    position: absolute;
+    font-size: 22px;
+    left: 12px;
+    top: 29px;
+    z-index: 20;
+}
+iframe.chart {
+    display: block;
+    width: 100%;
+    height: 300px;
+    top: -15px;
+    position: relative;
+    left: 0;
+    overflow: hidden;
+}
+blockhide {
+    display: block;
+    position: absolute;
+    background: #161a24;
+    width: 100%;
+    height: 75px;
+    top: 263px;
+    z-index: 5;
+}
+iframe.chartAnalysis1 {
+    display: block;
+    width: 100%;
+    height: 185px;
+    top: -40px;
+    position: relative;
+    left: 0;
+    overflow: hidden;
+    filter: hue-rotate(45deg);
+}
+.assestmovement {
+    display: block;
+    position: fixed;
+    font-size: 15px;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+.contractmovement {
+    display: block;
+    position: absolute;
+    background: #161a24;
+    margin-top: -60px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.assestmovement {
+    display: block;
+    position: absolute;
+    font-size: 15px;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    margin-top: -5px;
+    top: 290px;
+}
+.info {
+    display: block;
+    position: relative;
+    top: 15px;
+}
+mirror {
+    display: block;
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    top: 0;
+    height: 475px;
+}
+.contractField {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    left: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+.contractFieldValue {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    float: right;
+    margin-top: -40px;
+    right: 20px;
+}
+button.button--cta.profileButton.buyButton {
+    background: #31a031;
+}
+button.button--cta.profileButton.sellButton {
+    background: #e43030;
+}
+g {
+    color: #31a031;
+}
+r {
+    color: #e43030;
+}
+
+/* log in sign in */
+.logInOrSignIn {
+    display: block;
+    position: absolute;
+    background: #161a24;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 53px;
+    z-index: 1000000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: sans-serif;
+}
+span.form {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+input.text-input.text-input--material {
+    display: block;
+    width: 70%;
+    left: 15%;
+    position: relative;
+    color: #9696aa;
+}
+.signInlogo {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.signIn {
+    text-align: center;
+}
+.signUp {
+    text-align: center;
+}
+rb {
+    color: royalblue;
+}
+.signUp {
+    text-align: center;
+    overflow: auto;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.signUp {
+    text-align: center;
+    overflow: auto;
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+}
+.iconApp {
+    display: block;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    background: url(../img/binomo.png);
+    background-size: cover;
+    zoom: 70%;
+}
+.centerImage {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+img.appLogoImage {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 14px;
+    height: 35px;
+    width: 35px;
+    z-index: 5;
+    filter: hue-rotate(310deg);
+}

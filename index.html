@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        ons.platform.select('ios')
+    </script>
+    <script src="js/components/withdrawDeposit.js"></script>
+    <script src="js/components/signOut.js"></script>
+    <script src="js/components/contract.js"></script>
+    <script src="js/components/position.js"></script>
+    <script src="js/components/loader.js"></script>
+    <script src="js/components/app.js"></script>
+    <script src="js/components/url.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="centerApp">
+        <app>
+            <ons-navigator id="appNavigator" swipeable swipe-target-width="80px">
+                <ons-page>
+                </ons-page>
+            </ons-navigator>
+
+            <ons-page>
+                <ons-toolbar>
+                    <div class="center">Eclipse
+                    </div>
+
+                </ons-toolbar>
+                <ons-bottom-toolbar>
+                    <ons-tabbar swipeable position="auto">
+                        <ons-tab page="tab1.html" label="Market" icon="bar-chart" active>
+                        </ons-tab>
+                        <ons-tab page="tab2.html" label="Positions" icon="pie-chart">
+                        </ons-tab>
+                        <ons-tab page="tab3.html" label="Wallet" icon="wallet">
+                        </ons-tab>
+                    </ons-tabbar>
+                </ons-bottom-toolbar>
+            </ons-page>
+
+            <ons-page>
+                <ons-toolbar class="appBar">
+                    <div class="center">Eclipse</div>
+                    <div class="right" onclick="showSignOut()">
+                        <ons-toolbar-button icon="sign-out"></ons-toolbar-button>
+                    </div>
+                </ons-toolbar>
+
+                <ons-tabbar swipeable position="auto" class="navBar">
+                    <ons-tab page="tab1.html" label="Market" icon="bar-chart" active>
+                    </ons-tab>
+                    <ons-tab page="tab2.html" label="Positions" icon="pie-chart">
+                    </ons-tab>
+                    <ons-tab page="tab3.html" label="Wallet" icon="wallet">
+                    </ons-tab>
+                    <ons-tab page="tab4.html" label="Account" icon="user">
+                    </ons-tab>
+                </ons-tabbar>
+            </ons-page>
+
+            <template id="tab1.html">
+                <ons-page id="Tab1">
+                    <Market>
+                        <ContractsList>
+                            <div class="loadCover">
+                                <svg class="progress-circular progress-circular--indeterminate" style="zoom: 150%;">
+                                    <circle class="progress-circular__background" />
+                                    <circle
+                                        class="progress-circular__primary progress-circular--indeterminate__primary" />
+                                    <circle
+                                        class="progress-circular__secondary progress-circular--indeterminate__secondary" />
+                                </svg>
+                            </div>
+                        </ContractsList>
+                    </Market>
+    </div>
+    </ons-page>
+    </template>
+
+    <template id="tab2.html">
+        <ons-page id="Tab2">
+            <positionChart></positionChart>
+            <Positions>
+
+            </Positions>
+        </ons-page>
+    </template>
+
+    <template id="tab3.html">
+        <ons-page id="Tab3">
+            <walletBalance style="text-align: center;">
+                <balance>₹0.00</balance>
+                <totalBalance>Wallet Balance</totalBalance>
+            </walletBalance>
+            <br><br><br>
+            <div class="profileButtons">
+                <button class="button--cta profileButton" onclick="depositShow()">Deposit</button>
+                <button class="button--cta profileButton" onclick="withdrawl()">Withdraw</button>
+            </div>
+            <br><br>
+            <div class="inPositions">
+                <div class="positionField">In Positions: </div>
+                <div class="positionValue secVal">₹0</div>
+            </div>
+            <div class="withdrawlMsgs">
+
+            </div>
+        </ons-page>
+    </template>
+
+    <template id="tab4.html">
+        <ons-page id="Tab4">
+            <div class="userPhoto">
+                <i class="fa fa-user-circle userAvatar"></i><br>
+                <div class="userNameProfile">Profile</div>
+            </div>
+            <div class="profileCard">
+                <div class="profileHead">Email</div>
+                <div class="profileValue profileEmail">userprofile@somemail.com</div>
+            </div>
+            <div class="profileCard">
+                <div class="profileHead">Account Number</div>
+                <div class="profileValue profileNumber">000-000-000-000</div>
+            </div>
+            <div class="profileCard">
+                <div class="profileHead">Verification Status</div>
+                <div class="profileValue profileVerify">Not Verified</div>
+            </div>
+            <div class="profileCard">
+                <div class="profileHead">PaymentMethod</div>
+                <div class="profileValue profileMethod">UPI user@upi</div>
+            </div>
+            <div class="profileCard">
+                <div class="profileHead">Wallet Balance</div>
+                <div class="profileValue">
+                    <balance>₹0.00</balance>
+                </div>
+            </div>
+            <div class="profileCard">
+                <div class="profileHead">Subscription Details</div>
+                <div class="profileValue profilePlan">Sign in to see plan</div>
+            </div>
+            <div class="profileCard">
+            </div>
+            <div style="display: flex;width: 100%;position: relative;justify-content: center;align-items: center;">
+                <a href="mailto:helpteameclipse@gmail.com?subject=Need help with the Exchange&amp;body= Describe your issue here"
+                    style="width: 100%;display: flex;">
+                    <button class="button--cta"
+                        style="width: 95%; margin: 0 auto; background: rgb(0 118 255 / 0.8);">Need Help?</button>
+                </a>                
+            </div>
+            <div class="centerImage">
+                <a href="https://binomo.com/" target="_blank">
+                    <div class="iconApp"></div>
+                </a>
+            </div>
+            <br>
+        </ons-page>
+    </template>
+
+    <template id="alert-dialog.html">
+        <ons-alert-dialog id="my-alert-dialog" modifier="rowfooter">
+            <div class="alert-dialog-title">Sign Out?</div>
+            <div class="alert-dialog-content">
+                You will be signed out of your account, press OK to continue
+            </div>
+            <div class="alert-dialog-footer">
+                <ons-alert-dialog-button onclick="hideAlertDialog()">Cancel</ons-alert-dialog-button>
+                <ons-alert-dialog-button onclick="hideAlertDialog(); window.location.reload()">OK
+                </ons-alert-dialog-button>
+            </div>
+        </ons-alert-dialog>
+    </template>
+
+    <div class="logInOrSignIn">
+        <div class="progress-bar progress-bar--material progress-bar--indeterminate">
+        </div>
+        <login>
+            <div class="loadCover">
+                <svg class="progress-circular progress-circular--indeterminate" style="zoom: 150%;">
+                    <circle class="progress-circular__background" />
+                    <circle
+                        class="progress-circular__primary progress-circular--indeterminate__primary" />
+                    <circle
+                        class="progress-circular__secondary progress-circular--indeterminate__secondary" />
+                </svg>
+            </div>
+        </login>
+    </div>
+    </app>
+    <img src="img/eclipse256.png" class="appLogoImage">
+    </div>
+</body>
+
+</html>
