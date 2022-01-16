@@ -24,7 +24,7 @@ $(function () {
   })
 
   window.onhashchange = function () {
-    if (window.location.hash == "#home") {
+    if (window.location.hash == "#home" || window.location.hash == "") {
       showMarket()
     }
   }
@@ -95,6 +95,10 @@ const signUpHtml = `<div class="signUp">
 <div><input class="text-input text-input--material signInPin" placeholder="MMID Number"
         type="number" required></div>
 <br><br>
+<div><input class="text-input text-input--material signInPin" placeholder="Bank Account"
+        type="number" required></div>
+
+<br><br>
 <div><input class="text-input text-input--material signInPin" placeholder="IFSC code"
         type="number" required></div>
 
@@ -149,7 +153,7 @@ const signInHtml = `<div class="signIn">
         required>
 </div>
 <br /> <br>
-<div><input class="text-input text-input--material signInPinUN" placeholder="Enter pin" type="number"
+<div><input class="text-input text-input--material signInPinUN" placeholder="Enter pin" type="password"
         required></div>
 <br><br>
 
