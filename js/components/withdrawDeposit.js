@@ -14,8 +14,8 @@ function withdrawl() {
                     if (amount > balance) {
                         ons.notification.alert("Insufficient Balance")
                     } else {
-                        if (amount < 50) {
-                            ons.notification.alert("Minimum withdrawl amount is ₹50")
+                        if (amount < 100) {
+                            ons.notification.alert("Minimum withdrawl amount is ₹100")
                         } else {
                             $.ajax({
                                 type: "POST",
