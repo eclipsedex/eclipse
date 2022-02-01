@@ -115,7 +115,7 @@ const App = {
             html += `<div class="toast">
             <div class="toast__message">
                 Withdrawl of ₹${response.profile.withdrawlAmount} pending, 
-                we generally process withdrawls within 3-4 business days, thanks for being patient, NOTE: deposits will be paused till the withdrawl is processed 
+                we generally process withdrawls in 3-4 business days, thanks for being patient, Withdrawl Fee: ₹50, NOTE: deposits will be paused till the withdrawl is processed 
             </div>
             <button class="toast__button" onclick="cancelWithdrawl()">Cancel</button>
         </div>`
