@@ -170,16 +170,21 @@ const signInHtml = `<div class="signIn">
 </div>
 <div style="
     display: block;
-    position: fixed;
+    position: relative;
     bottom: 20px;
     font-size: 14px;
     width: 80%;
     z-index: 100;
     background: #31a031;
     left: 10%;
-    padding: 10px;
-    border-radius: 15px;
+    padding: 10px 16px;
+    border-radius: 5px;
     color: #fff;
+    max-width: 800px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    margin-left: -16px;
+    margin-top: 50px;
 ">Earn a withdrawable cashback of ₹200 to ₹500 on your first deposit, offer valid till February 3, 2022
 </div>
 </div>`
