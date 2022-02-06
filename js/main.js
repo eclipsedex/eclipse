@@ -184,7 +184,7 @@ const signInHtml = `<div class="signIn">
     line-height: 20px;
     letter-spacing: 0.1px;
     margin-left: -16px;
-    margin-top: 50px;
-">Earn a withdrawable cashback of ₹50 to ₹200 on your first deposit, offer valid till February 5, 2022
+    margin-top: 50px; 
+">Open any 5 positions with minimum 2x leverage in the next week and win from ₹1,000 to ₹5,000 directly in your wallet as withdrawble cashback! 
 </div>
 </div>`
